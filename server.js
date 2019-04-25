@@ -35,6 +35,39 @@ app.get('/', (req, res) => {
   res.send('<h1>Test App</h1>');
 });
 
+//GET New User Route
+app.get('/signup', (req, res) => {
+  res.render('landing/signup');
+});
+
+//POST Create User Route
+app.post('/signup', (req, res) => {
+  const errors = [];
+
+  //Validation Form Data
+  if(!req.body.name) {
+    errors.push({message: 'Please enter your name'});
+  }
+
+  if(!req.body.email) {
+    errors.push({message: 'Please enter your email'});
+  }
+
+  if(!req.body.password) {
+    errors.push({message: 'Please enter your password'});
+  }
+
+  if(!req.body.password != req.body.password2) {
+    errors.push({message: 'Your passwords do not match'});
+  }
+
+  //If there are any validation errors, Re-render signup page with error messages
+  if(errors.length) {
+    return res.render('landing/signup', {user: req.body, errors: errors});
+  }
+})
+
+
 
 // Server ======================================= //
 app.listen(PORT, () => {
