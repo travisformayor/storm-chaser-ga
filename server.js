@@ -37,35 +37,59 @@ app.get('/', (req, res) => {
 
 //GET New User Route
 app.get('/signup', (req, res) => {
-  res.render('landing/signup');
+  res.render('landing');
 });
 
 //POST Create User Route
 app.post('/signup', (req, res) => {
   const errors = [];
+  console.log('Hi');
 
   //Validation Form Data
   if(!req.body.name) {
     errors.push({message: 'Please enter your name'});
+  } else if (req.body.name) {
+    let check = /[A-Za-z]+$/;
+    if(req.body.name.match(check)){
+    } else {
+      errors.push({message: 'Please enter a valid first name'})
+    }
   }
 
-  if(!req.body.email) {
-    errors.push({message: 'Please enter your email'});
+  if(!req.body.last) {
+    errors.push({message: 'Please enter your last name'})
+  } else if (req.body.last) {
+    let check = /[A-Za-z]+$/;
+    if(req.body.last.match(check)){
+      // console.log('passed');
+    } else {
+      errors.push({message: 'Please enter a valid last name'})
+    }
   }
 
-  if(!req.body.password) {
-    errors.push({message: 'Please enter your password'});
-  }
-
-  if(!req.body.password != req.body.password2) {
-    errors.push({message: 'Your passwords do not match'});
-  }
+  // if(!req.body.email) {
+  //   errors.push({message: 'Please enter your email'});
+  // } else if (req.body.email) {
+  //   console.log('hi');
+    // let check = /\S+@\S+\.\S+/;
+    // if(req.body.email.match(check)){
+    // } else {
+    //   errors.push({message: 'Please enter a valid email'})
+    // }
+  // }
 
   //If there are any validation errors, Re-render signup page with error messages
   if(errors.length) {
-    return res.render('landing/signup', {user: req.body, errors: errors});
+    return res.json({
+      error: [errors]
+    });
   }
+  //Add User to DB, catch and then-res JSON success, send success
+  
+
+
 })
+
 
 
 
