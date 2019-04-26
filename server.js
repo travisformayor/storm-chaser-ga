@@ -61,22 +61,22 @@ app.post('/signup', (req, res) => {
   } else if (req.body.last) {
     let check = /[A-Za-z]+$/;
     if(req.body.last.match(check)){
-      // console.log('passed');
+      console.log('passed');
     } else {
       errors.push({message: 'Please enter a valid last name'})
     }
   }
 
-  // if(!req.body.email) {
-  //   errors.push({message: 'Please enter your email'});
-  // } else if (req.body.email) {
-  //   console.log('hi');
-    // let check = /\S+@\S+\.\S+/;
-    // if(req.body.email.match(check)){
-    // } else {
-    //   errors.push({message: 'Please enter a valid email'})
-    // }
-  // }
+  if(!req.body.email) {
+    errors.push({message: 'Please enter your email'});
+  } else if (req.body.email) {
+    console.log('hi');
+    let check = /\S+@\S+\.\S+/;
+    if(req.body.email.match(check)){
+    } else {
+      errors.push({message: 'Please enter a valid email'})
+    }
+  }
 
   //If there are any validation errors, Re-render signup page with error messages
   if(errors.length) {
