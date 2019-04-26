@@ -31,9 +31,9 @@ app.use(session({
 
 // Routes ======================================= //
 // Sanity test route
-app.get('/', (req, res) => {
-  res.send('<h1>Test App</h1>');
-});
+// app.get('/', (req, res) => {
+//   res.send('<h1>Test App</h1>');
+// });
 
 //GET All Users
 app.get('/api/users', (req, res) => {
@@ -45,7 +45,7 @@ app.get('/api/users', (req, res) => {
 });
 
 //GET New User Route
-app.get('/signup', (req, res) => {
+app.get('/', (req, res) => {
   res.render('landing');
 });
 
