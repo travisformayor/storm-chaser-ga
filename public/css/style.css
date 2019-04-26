@@ -47,7 +47,14 @@ input[type="submit"] {
   cursor: pointer;
   box-shadow: none;
 }
+input[type="submit"]:disabled {
+  background: gray;
+}
 
+/* USER TABLE */
+table, th, td {
+  border: 1px solid black;
+}
 
 /* LAYOUT */
 
@@ -77,16 +84,11 @@ input[type="submit"] {
 
 
 /* ALERT */
-
-.alert.error:first-of-type {
-  margin: -30px auto 10px;
-}
-
 .alert.error {
   background-color: #f8d7da;
-  max-width: 680px;
-  padding: 20px;
-  margin: 0 auto 10px;
+  /* max-width: 680px; */
+  padding: 10px 20px;
+  margin: 5px auto 0;
   border: 1px solid #f5c6cb;
   border-radius: 4px;
   color: #721c24;

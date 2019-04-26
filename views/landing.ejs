@@ -1,11 +1,9 @@
 <% include ./partials/_header.ejs %>
 
-<% include ./partials/_alerts.ejs %>
- 
 <section class="signup">
   <div class="container">
     <h1>Sign Up</h1>
-    <form action="/signup" method="POST">
+    <form action="/signup" method="POST" id="signupForm">
       <div class="form-group">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" />
