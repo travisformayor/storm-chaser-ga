@@ -18,10 +18,14 @@ if ($('#userList').length) {
       res.forEach(user => {
         let userHtml = `
           <tr> 
-            <td>${counter}</td>
+            <td class="id">${counter}</td>
             <td>${user.firstName}</td>
             <td>${user.lastName}</td>
             <td>${user.email}</td>
+            <td>
+              <div class="status-light"></div>
+              Active
+            </td>
           </tr>`;
         $('#userList').append(userHtml);
         counter++;

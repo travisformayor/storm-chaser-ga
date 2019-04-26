@@ -62,7 +62,15 @@ $('#signupForm').on('submit', (e) => {
         } else if (response.success) {
             // if success, delete form section contents and insert success
             $('.signup').empty();
-            $('.signup').append('<h1>Success!</h1>');
+            const successHTML = `
+              <div class="success-box">
+                <img src="./img/success-image.png" alt="Success">
+                <div class="success-text">
+                  <h1>Thank you for subscribing to Storm Chaser News</h1>
+                  <p>Now we just need to confirm your email address - please click the link in the email we sent you. Thanks</p>
+                </div>
+              </div>`
+            $('.signup').append(successHTML);
         }
     };
 });
