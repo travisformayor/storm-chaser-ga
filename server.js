@@ -35,9 +35,18 @@ app.get('/', (req, res) => {
   res.send('<h1>Test App</h1>');
 });
 
+//GET All Users
+app.get('/api/users', (req, res) => {
+  db.Users.find()
+  .exec((er, AllUsers) => {
+    if (err) return res.json({error: err});
+    res.json(allUsers);
+  })
+});
+
 //GET New User Route
 app.get('/signup', (req, res) => {
-  res.render('landing/signup');
+  res.render('landing');
 });
 
 //POST Create User Route
@@ -47,26 +56,47 @@ app.post('/signup', (req, res) => {
   //Validation Form Data
   if(!req.body.name) {
     errors.push({message: 'Please enter your name'});
+  } else if (req.body.name) {
+    let check = /[A-Za-z]+$/;
+    if(req.body.name.match(check)){
+    } else {
+      errors.push({message: 'Please enter a valid first name'})
+    }
+  }
+
+  if(!req.body.last) {
+    errors.push({message: 'Please enter your last name'})
+  } else if (req.body.last) {
+    let check = /[A-Za-z]+$/;
+    if(req.body.last.match(check)){
+    } else {
+      errors.push({message: 'Please enter a valid last name'})
+    }
   }
 
   if(!req.body.email) {
     errors.push({message: 'Please enter your email'});
-  }
-
-  if(!req.body.password) {
-    errors.push({message: 'Please enter your password'});
-  }
-
-  if(!req.body.password != req.body.password2) {
-    errors.push({message: 'Your passwords do not match'});
+  } else if (req.body.email) {
+    let check = /\S+@\S+\.\S+/;
+    if(req.body.email.match(check)){
+    } else {
+      errors.push({message: 'Please enter a valid email'})
+    }
   }
 
   //If there are any validation errors, Re-render signup page with error messages
   if(errors.length) {
-    return res.render('landing/signup', {user: req.body, errors: errors});
-  }
-})
+    return res.json({
+      error: [errors]
+    });
+  };
+  //Add User to DB, catch and then-res JSON success, send success
+  // db.User.create(req.body, (err, newUser) => {
+  //   .catch(err => res.json({error: err}))
+  //   .then(res.json(success))
+  // })
 
+})
 
 
 // Server ======================================= //
