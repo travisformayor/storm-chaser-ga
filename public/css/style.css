@@ -1,29 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  /* border: 1px solid red; */
 }
 
 html {
-  position: relative;
+  /* position: relative; */
   min-height: 100%;
 }
 
 body {
-  font-family: sans-serif;
-  margin-bottom: 100px;
+  font-family: 'Open Sans', sans-serif;
   /* min-height: 100vh; */
 }
+/* Landing Page */
+.head-title {
+  background-color: #2B5A88;
+  width: 100;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(27.1828px);
+  
+}
 
-h1 {
-  margin-bottom: 40px;
+.head-title img {
+  width: auto;
+  height: 2.25em;
+  display: inline-block;
+} 
+
+.head-title h1 {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  text-align: center;
+  display: inline-block;
+} 
+
+.header-holder {
+  margin: auto;
+  display: inline-block;
+}
+.landing-container {            
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.425), rgba(0, 0, 0, 0.418)),
+              url("../img/Storms\ -\ Header.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+}
+
+.landing-container h1 {
+  color: white;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 45px;
+  margin: 7px;
+}
+
+.landing-container p {
+  color: white;
+  font-size: 15px;
+  margin: 4px;
+}
+
+/* Newsletter Banner */
+.newsletter-holder {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.425), rgba(0, 0, 0, 0.418)),
+            url("../img/storm3_cover.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+}
+
+.newsletter-holder h1 {
+  color: white;
+  font-style: normal;
+  font-weight: 800px;
+  font-size: 20px;
+  line-height: 18px;
+  margin: 7px;
+}
+
+.newsletter-holder p {
+  color: white;
+  font-size: 18px;
+}
+
+/* Current */
+
+.current-banner {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.425), rgba(0, 0, 0, 0.418)),
+              url("../img/lightning.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+}
+
+.current-banner h1 {
+  color: white;
+  font-style: normal;
+  font-weight: 800px;
+  font-size: 20px;
+  line-height: 18px;
+  margin: 7px;
+}
+
+.current-banner p {
+  color: white;
+  font-size: 18px;
+}
+
+/* Subscribe Page */
+.container h1 {
+  text-align: center;
+  color: #2B5A88;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 label {
   display: block;
   margin-bottom: 10px;
-  font-size: 14px;
+  font-size: 16px;
   color: #444;
 }
 
@@ -34,10 +149,16 @@ input {
   line-height: 1.6;
   border: 2px solid #ddd;
 }
+.submit-holder {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+}
 
 input[type="submit"] {
   background: steelblue;
-  width: auto;
+  width: 12em;
   padding: 10px 20px;
   font-size: 16px;
   color: #fff;
@@ -47,6 +168,8 @@ input[type="submit"] {
   float: right;
   cursor: pointer;
   box-shadow: none;
+
+  
 }
 input[type="submit"]:disabled {
   background: gray;
@@ -73,6 +196,7 @@ table, th, td {
   width: 100%;
   margin-bottom: 30px;
   overflow: hidden;
+  text-align: center;
 }
 
 
@@ -82,7 +206,11 @@ table, th, td {
   max-width: 600px;
   margin: 40px auto;
 }
-
+.signup {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* ALERT */
 .alert.error {
