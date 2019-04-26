@@ -2,6 +2,18 @@ console.log('JS Check');
 // If there are any alerts already, remove them
 $('.alert').remove();
 
+// testing appending alerts...
+const errors = [{type: 'email', message: 'Please enter your email'}];
+errors.forEach(error => {
+  let alert = `
+    <div class="alert error">
+      <div class="container">
+        <p>${error.message}</p>
+      </div>
+    </div>`
+  $(`#${error.type}`).parent().append(alert);
+});
+
 // Form Submit Event Handler
 $('#signupForm').on('submit', (e) => {
   e.preventDefault();
