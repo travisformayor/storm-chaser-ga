@@ -15,6 +15,11 @@ body {
   font-family: 'Open Sans', sans-serif;
   /* min-height: 100vh; */
 }
+
+.landing-body {
+  max-width: 800px;
+  margin: 0 auto;
+}
 /* Landing Page */
 .head-title {
   background-color: #2B5A88;
