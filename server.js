@@ -37,7 +37,7 @@ app.get('/', (req, res) => {
 
 //GET New User Route
 app.get('/signup', (req, res) => {
-  res.render('landing/signup');
+  res.render('landing');
 });
 
 //POST Create User Route
@@ -63,7 +63,7 @@ app.post('/signup', (req, res) => {
 
   //If there are any validation errors, Re-render signup page with error messages
   if(errors.length) {
-    return res.render('landing/signup', {user: req.body, errors: errors});
+    return res.render('landing', {user: req.body, errors: errors});
   }
 })
 
