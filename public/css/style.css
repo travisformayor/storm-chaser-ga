@@ -4,7 +4,6 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  
 }
 
 html {
@@ -236,4 +235,37 @@ footer {
   color: #444;
   text-align: center;
   overflow: hidden;
+}
+
+/* SUCCESS BOX */
+.success-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url('../img/succss-air.jpg');
+  background-size: cover;
+}
+.success-box img {
+  height: 100px;
+  width: auto;
+  margin: 30px;
+}
+.success-text {
+  background: #D8D8D8;
+  opacity: 0.85;
+  margin: 20px;
+
+}
+.success-text h1 {
+  margin-bottom: 10px;
+  text-align: center;
+  color: #4C7394;
+  font-size: 2em;
+  font-weight: bold;
+}
+.success-text p {
+  text-align: center;
+  color: #2B5A88;
+  margin: 5px 30px;
 }

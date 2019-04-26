@@ -1,0 +1,67 @@
+.users * {
+  font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.users .status-light {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50% / 50%;
+  background-color: greenyellow;
+  box-shadow: inset 0 0 10px rgba(0, 128, 0, 0.308);
+}
+
+.users-top {
+    width: 100%;
+    height: 95px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    background-color: #212b36;
+}
+main.users {
+  padding: 2em 80px;
+  background-color: #f7f7f7;
+  /* height: 100vh; */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100px;
+}
+
+.users table {
+  margin: 0 auto;
+  border: 0;
+  text-align: left;
+}
+
+.users td, .users th {
+  border: 0;
+  width: 200px;
+}
+.users .id {
+  width: 10px;
+}
+.users tr td {
+  background-color: white;
+  padding: 1em;
+}
+.users th {
+  /* width: 71px;
+  height: 19px; */
+  font-size: 1.15em;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #888888;
+  margin-bottom: 2em;
+  text-align: left;
+  padding-left: 1em;
+}
+
+.users .header-line {
+  height: 2em;
+  padding: 0;
+}
