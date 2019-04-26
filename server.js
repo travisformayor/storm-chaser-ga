@@ -35,6 +35,15 @@ app.get('/', (req, res) => {
   res.send('<h1>Test App</h1>');
 });
 
+//GET All Users
+app.get('/api/users', (req, res) => {
+  db.Users.find()
+  .exec((er, AllUsers) => {
+    if (err) return res.json({error: err});
+    res.json(allUsers);
+  })
+});
+
 //GET New User Route
 app.get('/signup', (req, res) => {
   res.render('landing');
@@ -43,7 +52,6 @@ app.get('/signup', (req, res) => {
 //POST Create User Route
 app.post('/signup', (req, res) => {
   const errors = [];
-  console.log('Hi');
 
   //Validation Form Data
   if(!req.body.name) {
@@ -61,7 +69,6 @@ app.post('/signup', (req, res) => {
   } else if (req.body.last) {
     let check = /[A-Za-z]+$/;
     if(req.body.last.match(check)){
-      console.log('passed');
     } else {
       errors.push({message: 'Please enter a valid last name'})
     }
@@ -70,7 +77,6 @@ app.post('/signup', (req, res) => {
   if(!req.body.email) {
     errors.push({message: 'Please enter your email'});
   } else if (req.body.email) {
-    console.log('hi');
     let check = /\S+@\S+\.\S+/;
     if(req.body.email.match(check)){
     } else {
@@ -83,14 +89,14 @@ app.post('/signup', (req, res) => {
     return res.json({
       error: [errors]
     });
-  }
+  };
   //Add User to DB, catch and then-res JSON success, send success
-  
-
+  // db.User.create(req.body, (err, newUser) => {
+  //   .catch(err => res.json({error: err}))
+  //   .then(res.json(success))
+  // })
 
 })
-
-
 
 
 // Server ======================================= //
