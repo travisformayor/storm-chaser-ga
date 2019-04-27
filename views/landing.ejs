@@ -1,0 +1,61 @@
+<% include ./partials/_header.ejs %>
+
+<%# Landing Page %>
+<div class="landing-body">
+<header>
+  <div class="head-title">
+    <div class="header-holder">
+    <img src="./img/Asset 2icon.png" alt="cloud-logo">
+    <h1>Storm Chaser News</h1>
+    </div>
+  </div>
+  <div class='landing-container'>
+  
+  <h1> All you need to chase the storm </h1>
+  <p>Subscribe to our newsletter for bi-weekly updates.</p>
+  </div>
+</header>
+
+<%# Newsletter Banner %>
+
+<section class="newsletter-banner">
+  <div class="newsletter-holder">
+  <h1>Be the first to know</h1>
+  <p> Our newsletter provides the latest updates about the storm. Never miss a storm again</p>
+  </div>
+</section>
+
+<%# Stay Current %>
+
+<section class="current-banner">
+  <h1>Stay Current</h1>
+  <p>Get updates on new and current trends in the storm chaser industry.</p>
+</section>
+
+<%# Subscription Page %>
+
+<section class="signup">
+  <div class="container">
+    <h1>Subscribe to our newsletter</h1>
+    <form action="/signup" method="POST" id="signupForm">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" />
+      </div>
+        <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" />
+      </div>
+      <div class="submit-holder">
+      <input type="submit" value="Subscribe" />
+      </div>
+    </form>
+  </div>
+</section> 
+</div>
+
+<% include ./partials/_footer.ejs %>

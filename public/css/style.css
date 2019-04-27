@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  /* position: relative; */
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  /* min-height: 100vh; */
+}
+
+.landing-body {
+  max-width: 800px;
+  margin: 0 auto;
+}
+/* Landing Page */
+.head-title {
+  background-color: #2B5A88;
+  width: 100;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(27.1828px);
+  
+}
+
+.head-title img {
+  width: auto;
+  height: 2.25em;
+  display: inline-block;
+} 
+
+.head-title h1 {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  text-align: center;
+  display: inline-block;
+} 
+
+.header-holder {
+  margin: auto;
+  display: inline-block;
+}
+.landing-container {            
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.425), rgba(0, 0, 0, 0.418)),
+              url("../img/Storms\ -\ Header.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+}
+
+.landing-container h1 {
+  color: white;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 45px;
+  margin: 7px;
+}
+
+.landing-container p {
+  color: white;
+  font-size: 15px;
+  margin: 4px;
+}
+
+/* Newsletter Banner */
+.newsletter-holder {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.425), rgba(0, 0, 0, 0.418)),
+            url("../img/storm3_cover.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+}
+
+.newsletter-holder h1 {
+  color: white;
+  font-style: normal;
+  font-weight: 800px;
+  font-size: 20px;
+  line-height: 18px;
+  margin: 7px;
+}
+
+.newsletter-holder p {
+  color: white;
+  font-size: 18px;
+}
+
+/* Current */
+
+.current-banner {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.425), rgba(0, 0, 0, 0.418)),
+              url("../img/lightning.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+}
+
+.current-banner h1 {
+  color: white;
+  font-style: normal;
+  font-weight: 800px;
+  font-size: 20px;
+  line-height: 18px;
+  margin: 7px;
+}
+
+.current-banner p {
+  color: white;
+  font-size: 18px;
+}
+
+/* Subscribe Page */
+.container h1 {
+  text-align: center;
+  color: #2B5A88;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #444;
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  line-height: 1.6;
+  border: 2px solid #ddd;
+}
+.submit-holder {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+}
+
+input[type="submit"] {
+  background: steelblue;
+  width: 12em;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  float: right;
+  cursor: pointer;
+  box-shadow: none;
+
+  
+}
+input[type="submit"]:disabled {
+  background: gray;
+}
+
+/* USER TABLE */
+table, th, td {
+  border: 1px solid black;
+}
+
+/* LAYOUT */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  overflow: hidden;
+}
+
+.alert .container {
+  margin-bottom: 0;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 30px;
+  overflow: hidden;
+  text-align: center;
+}
+
+
+/* LOGIN PAGE */
+
+.login, .signup {
+  max-width: 600px;
+  margin: 40px auto;
+}
+.signup {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ALERT */
+.alert.error {
+  background-color: #f8d7da;
+  /* max-width: 680px; */
+  padding: 10px 20px;
+  margin: 5px auto 0;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  color: #721c24;
+}
+
+
+/* FOOTER */
+
+footer {
+  position: absolute;
+  bottom: 0;
+  background-color: #ddd;
+  width: 100%;
+  padding: 20px 5%;
+  color: #444;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* SUCCESS BOX */
+.success-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url('../img/succss-air.jpg');
+  background-size: cover;
+}
+.success-box img {
+  height: 100px;
+  width: auto;
+  margin: 30px;
+}
+.success-text {
+  background: #D8D8D8;
+  opacity: 0.85;
+  margin: 20px;
+
+}
+.success-text h1 {
+  margin-bottom: 10px;
+  text-align: center;
+  color: #4C7394;
+  font-size: 2em;
+  font-weight: bold;
+}
+.success-text p {
+  text-align: center;
+  color: #2B5A88;
+  margin: 5px 30px;
+}
